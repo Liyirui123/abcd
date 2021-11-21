@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="add">+</button>
+    <span>0</span>
+    <button class="reduce">-</button>
+
+    
+ <script>
+     let add = document.querySelector('.add');
+        let span = document.querySelector('span');
+        let reduce = document.querySelector('.reduce');
+        console.log(add, span, reduce);
+        //2-功能部分
+        add.onclick = function(){
+            console.log(span.innerText);
+            
+            if(span.innerText < 3){
+                span.innerText++;
+            }else{
+                alert("最大不超过3")
+            }
+        }
+
+        reduce.onclick= function(){
+            console.log(span.innerText);
+            
+            if(span.innerText>-3){
+                span.innerText--;
+            }else{
+                alert('最小不小于-3');
+            }
+        }
+
+        function calc(a,b,c){
+            if(b=='+'){
+                console.log(a+c);
+            }
+            if(b=='-'){
+                console.log(a-c);
+            }
+
+            if(b=='*'){
+                console.log(a*c);
+            }
+            if(b =='/'){
+                console.log(a/c);
+            }
+        }
+        calc(10,'+',2); 
+        calc(10,'-',2);
+        calc(10,'*',2);
+        calc(10,'/',2)
+
+ </script>
+</body>
+</html>
+<!-- if(c == '+'){
+    console.log(a + b);
+} -->
