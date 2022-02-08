@@ -1,0 +1,48 @@
+.bigbox{
+    background-color:brown;
+    display: flex;
+    border: 4px black solid;
+    width: 480px;
+    height: 420px;
+    position: fixed;
+    top: 100px;
+    left: 380px;
+    overflow: hidden;
+   
+    
+    
+}
+.imgPath{
+    width: 400px;
+}
+
+.btn{
+    display: flex;
+   align-items: center;
+    font-size: 40px;
+    width: 40px;
+    background-color: burlywood;
+
+}
+.text1{
+    width: 400px;
+    height: 40px;
+    background-color: coral;
+}
+.text2{
+    width: 400px;
+    height: 90px;
+    background-color: cornsilk;
+}
+
+.headImg{
+    width: 50px;
+}
+
+.content{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 400px;
+}
+

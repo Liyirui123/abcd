@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="bigbox">
+        <div class="btn left">
+            &lt;</div>
+<div class="content">
+        <div class="swiper">
+            <img class="imgPath" src="http://101.43.53.16:8080/images/people1.jpg">
+            <div class="text1"></div>
+            <div class="text2"></div>
+            <span class="headImg">
+                <img class="headImg" src="http://101.43.53.16:8080/images/head1.png">
+            </span>
+            <span class="name"></span>
+        </div>
+         <div class="swiper">
+                    <img class="imgPath">
+                    <div class="text1"></div>
+                    <div class="text2"></div>
+                    <span class="headImg">
+                        <img class="headImg">
+                    </span>
+                    <span class="name"></span>
+
+                </div>
+                <div class="swiper">
+                    <img class="imgPath">
+                    <div class="text1"></div>
+                    <div class="text2"></div>
+                    <span class="headImg">
+                        <img class="headImg">
+                    </span>
+                    <span class="name"></span>
+                </div> 
+                <div class="swiper">
+                    <img class="imgPath">
+                    <div class="text1"></div>
+                    <div class="text2"></div>
+                    <span class="headImg">
+                        <img class="headImg">
+                    </span>
+                    <span class="name"></span>
+                </div> 
+            </div>
+        <div class="btn right">&gt;</div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        var btn = document.getElementsByClassName("btn");
+        console.log(btn);
+        var content =document.getElementsByClassName('content');
+        var left = document.getElementsByClassName('left');
+        var right = document.getElementsByClassName('right');
+        var text1 = document.getElementsByClassName('text1');
+        var text2 = document.getElementsByClassName('text2');
+        var Pname = document.getElementsByClassName('name');
+        var people = document.getElementsByClassName('imgPath');
+        var head = document.getElementsByClassName('headImg');
+        console.log(text1);
+
+        const res = axios.get('http://101.43.53.16:8080/text').then(res => {
+            console.log(res.data);
+            console.log(res.data.persionList[0]);
+            console.log(res.data.persionList[0].text1);
+            console.log(res.data.persionList[0].text2);
+            console.log(res.data.persionList[0].name);
+            console.log(res.data.persionList[0].imgPath);
+            console.log(res.data.persionList[0].headImg);
+            // var i = 0;
+            // text1[i].innerHTML = res.data.persionList[i].text1;
+            // text2[i].innerHTML = res.data.persionList[i].text2;
+            // Pname[i].innerHTML = res.data.persionList[i].name;
+            // people[i].src = "http://101.43.53.16:8080/images/people" + (i + 1) + ".jpg";
+            // head[i].src = "http://101.43.53.16:8080/images/head" + (i + 1) + ".png";
+
+            btn[0].onclick = function () {
+            if (i == 0) {
+                
+                i = content.length - 1;
+                content.style.left = (i * -400) + 'px'
+            }
+            else {
+                i--;
+                content.style.left = (i * -400) + 'px'
+            }
+        };
+
+        btn[1].onclick = function () {
+            i++;
+            if (i == content.length) {
+                i = 0;
+                content.style.left = 0;
+            } else {
+              content.style.left = (i * -400) + 'px';
+            }
+        }
+
+        })
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

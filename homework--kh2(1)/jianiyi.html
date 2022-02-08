@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .shell {
+            width: 600px;
+            height: 300px;
+            border: solid black 1px;
+            display: flex;
+        }
+
+        .btn {
+            width: 50px;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .swiper-cover {
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .swiper {
+            height: 100%;
+            display: flex;
+            position: relative;
+            left: 0px;
+            transition: .5s;
+            width: 300%;
+        }
+
+        .swiper-item {
+            width: 500px;
+            height: 100%;
+            border: solid black 1px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="btn left">左</div>
+        <div class="swiper-cover">
+            <div class="swiper">
+                <div class="swiper-item">0</div>
+                <div class="swiper-item">1</div>
+                <div class="swiper-item">2</div>
+            </div>
+        </div>
+        <div class="btn right">右</div>
+    </div>
+
+
+    <script>
+        var btn = document.getElementsByClassName("btn");
+        var swiper = document.querySelector('.swiper');
+        var swiper_item = document.getElementsByClassName('swiper-item')
+
+        let i = 0;
+        //点击左边的按钮触发函数
+        btn[0].onclick = function () {
+            if (i == 0) {
+                i = swiper_item.length - 1;
+                swiper.style.left = (i * -500) + 'px'
+            }
+            else {
+                i--;
+                swiper.style.left = (i * -500) + 'px'
+            }
+        };
+
+        //点击右边的按钮触发函数
+        btn[1].onclick = function () {
+            i++;
+            if (i == swiper_item.length) {
+                i = 0;
+                swiper.style.left = 0;
+            } else {
+                swiper.style.left = (i * -500) + 'px';
+            }
+        }
+    </script>
+</body>
+
+</html>
