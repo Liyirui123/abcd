@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #204887;
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .bigbox {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .box1 {
+            display: flex;
+        }
+        
+        .title-content {
+            display: flex;
+            justify-content: center;
+            width: 1200px;
+            height: 220px;
+        }
+        
+        #title {
+            height: 220px;
+        }
+        
+        .headImg {
+            width: 182px;
+            height: 182px;
+            background-color: beige;
+        }
+        
+        .left-side {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 200px;
+            height: 900px;
+            background-color: darkseagreen;
+        }
+        
+        .right-side {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1000px;
+        }
+        
+        .column {
+            border: solid 1px;
+            height: 35px;
+            width: 180px;
+        }
+        
+        .id {
+            border-radius: 8px;
+            width: 100px;
+            height: 20px;
+            background-color: gold;
+        }
+        
+        .header {
+            display: flex;
+            height: 50px;
+            width: 800px;
+            margin-left: 20px;
+            background-color: #2559a8;
+        }
+        
+        .center {
+            display: flex;
+            justify-content: center;
+            width: 800px;
+            height: 900px;
+        }
+        
+        .message {
+            margin: 10px 5px 10px 10px;
+            width: 100px;
+            height: 50px;
+            font-size: 14px;
+        }
+        
+        .smallbox {
+            margin-top: 15px;
+            width: 700px;
+            height: 80px;
+            background-color: #748bb2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .publish {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 680px;
+            height: 60px;
+            border: 1px solid aliceblue;
+        }
+        
+        h1 {
+            font-weight: lighter;
+        }
+        
+        a {
+            display: flex;
+            text-decoration: none;
+            color: #2559a8;
+            font-size: 20px;
+            background-color: antiquewhite;
+            width: 600px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bigbox">
+        <div class="title">
+            <div class="title-content">
+                <img src="./images/标题（1）.png" id="title">
+            </div>
+        </div>
+        <div class="left-side">
+            <div class="headImg"></div>
+            <div class="id"></div>
+            <div class="column">喜剧</div>
+            <div class="column">悬疑</div>
+            <div class="column">爱情</div>
+            <div class="column">武侠</div>
+            <div class="column">纪录片</div>
+        </div>
+        <div class="right-side">
+            <div class="header">
+                <div class="message">
+                    <h1>广场</h1>
+                </div>
+                <div class="message">
+                    <h1>我的</h1>
+                </div>
+            </div>
+            <div class="center">
+                <div class="smallbox">
+                    <div class="publish"><a href="./publish.html" target="blank">发布</a>
+                    </div>
+                </div>
+            </div>
+            <div class="wall"></div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>

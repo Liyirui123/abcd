@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            background-color: #204887;
+        }
+        
+        .bigbox {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .box1 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .box1-content {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 1200px;
+            height: 230px;
+        }
+        
+        #title {
+            display: flex;
+            flex-wrap: wrap;
+            height: 230px;
+        }
+        
+        .box2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 420px;
+            height: 400px;
+            background-color: #748bb2;
+            overflow: hidden;
+        }
+        
+        .content {
+            display: flex;
+            width: 840px;
+            height: 200px;
+            /* background-color: #ecd189; */
+            position: relative;
+            left: 210px;
+        }
+        
+        .center {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 420px;
+            height: 200px;
+        }
+        
+        h1 {
+            margin-top: 30px;
+        }
+        
+        .frame {
+            width: 280px;
+            height: 40px;
+            margin-top: 18px;
+            background-color: #204887;
+            border: #204887;
+        }
+        
+        #btn {
+            width: 80px;
+            height: 40px;
+            background-color: #ecd189;
+            border: #ecd189;
+        }
+        
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        #btn1 {
+            background-color: #748bb2;
+            border: none;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="bigbox">
+            <div class="box1">
+                <div class="box1-content">
+                    <img id="title" src="./images/标题（1）.png">
+                </div>
+
+            </div>
+            <div class="box2">
+                <div class="header">
+                    <h1>登录</h1>
+                </div>
+
+                <div class="content">
+                    <div class="center">
+                        <input type="text" placeholder="账号" class="frame">
+                        <input type="password" placeholder="密码" class="frame">
+                    </div>
+                    <div class="center">
+                        <input type="text" placeholder="账号" class="frame">
+                        <input type="password" placeholder="密码" class="frame">
+                    </div>
+                </div>
+                <div class="footer">
+                    <input type="submit" value="OK" id="btn">
+
+                </div>
+                <div class="foot">
+                    <button id="btn1">没有账号?立即注册</button> </div>
+
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
